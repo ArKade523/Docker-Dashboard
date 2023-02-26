@@ -1,0 +1,140 @@
+* {
+  /* globals */
+  --background-color: #001020;
+  --body-color: #1d76b0;
+  --text-color: #222;
+  --highlight-color: rgba(255, 255, 255, 0.5);
+
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+  height: 100%;
+  width: 100%;
+  color: var(--background-color);
+}
+
+header {
+  text-align: center;
+}
+
+#team-logo {
+  width: 100px;
+  margin: 0.5rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.block {
+  display: inline-grid;
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.container {
+  background-color: var(--highlight-color);
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  margin: 0.25rem;
+}
+
+.alert {
+  background-color: red;
+}
+
+/* Gauge Styles */
+
+.gauge {
+  width: 100%;
+  max-width: 200px;
+  font-size: 3rem;
+}
+
+.gauge-body {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: var(--highlight-color);
+  position: relative;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  overflow: hidden;
+}
+
+.gauge-fill {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: 100%;
+  background: var(--background-color);
+  transform-origin: center top;
+  transition: 0.2s ease-out;
+}
+
+.gauge-cover {
+  width: 75%;
+  height: 150%;
+  background: var(--body-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25%;
+  box-sizing: border-box;
+  font-size: 50px;
+}
+
+.gauge-label {
+  width: 100%;
+  text-align: center;
+  font-size: xx-large;
+  text-decoration: solid;
+}
+
+/* Form Styles */
+
+form {
+  background-color: var(--highlight-color);
+  border-radius: .5rem;
+  margin: .25rem;
+  padding: 1rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.25rem;
+  margin: 0.5rem 0;
+  display: inline-block;
+}
+
+button {
+  width: 100%;
+  font-size: large;
+  outline: none;
+  margin: 0.25rem 0rem;
+  display: inline-block;
+  padding: 0.25rem;
+}

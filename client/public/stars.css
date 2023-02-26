@@ -1,0 +1,22 @@
+body {
+    background-color: #000820;
+  }
+  
+  #stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .star {
+    height: 3px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
